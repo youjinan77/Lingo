@@ -1,131 +1,26 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lingo. 英语学习</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="topbar">
-    <div class="brand">Lingo.</div>
-    <nav id="nav">
-      <button class="nav-btn active" data-page="home">首页</button>
-      <button class="nav-btn" data-page="words">单词</button>
-      <button class="nav-btn" data-page="phrases">短语</button>
-      <button class="nav-btn" data-page="grammar">语法</button>
-      <button class="nav-btn" data-page="reading">阅读</button>
-      <button class="nav-btn" data-page="listening">听力</button>
-      <button class="nav-btn" data-page="mistakes">错题本</button>
-    </nav>
-  </header>
-
-  <main>
-    <section class="page active" id="home">
-      <div class="hero">
-        <div>
-          <p class="eyebrow">ENGLISH STUDY DASHBOARD</p>
-          <h1>Good morning.</h1>
-          <p class="subtitle">今天想学点什么？</p>
-        </div>
-        <div class="quote-card">
-          <span>今日一句</span>
-          <strong>The best time to start is now.</strong>
-          <small>最好的开始就是现在。</small>
-        </div>
-      </div>
-
-      <div class="cards">
-        <article class="study-card"><span class="icon">Aa</span><h3>单词</h3><p><b id="wordCount">3</b> 个</p><div class="bar"><i style="width:35%"></i></div></article>
-        <article class="study-card"><span class="icon">“ ”</span><h3>短语</h3><p><b>3</b> 个</p><div class="bar"><i style="width:28%"></i></div></article>
-        <article class="study-card"><span class="icon">文</span><h3>语法</h3><p><b>3</b> 节</p><div class="bar"><i style="width:40%"></i></div></article>
-        <article class="study-card"><span class="icon">≡</span><h3>阅读</h3><p><b>2</b> 篇</p><div class="bar"><i style="width:25%"></i></div></article>
-        <article class="study-card"><span class="icon">▶</span><h3>听力</h3><p><b>2</b> 篇</p><div class="bar"><i style="width:22%"></i></div></article>
-        <article class="study-card"><span class="icon">✓</span><h3>错题本</h3><p><b id="mistakeCount">0</b> 题</p><div class="bar"><i style="width:8%"></i></div></article>
-      </div>
-
-      <div class="lower-grid">
-        <section class="panel">
-          <div class="panel-title"><h2>今日学习</h2><span id="taskProgress">0 / 5</span></div>
-          <label><input type="checkbox" class="task"> 复习 15 个单词</label>
-          <label><input type="checkbox" class="task"> 学习 5 个常用短语</label>
-          <label><input type="checkbox" class="task"> 完成 1 个语法知识点</label>
-          <label><input type="checkbox" class="task"> 完成 1 篇阅读</label>
-          <label><input type="checkbox" class="task"> 完成 1 篇听力</label>
-        </section>
-        <section class="panel">
-          <div class="panel-title"><h2>学习数据</h2><span>本周</span></div>
-          <div class="stats">
-            <div><b>7</b><span>连续天数</span></div>
-            <div><b>12h</b><span>累计时长</span></div>
-            <div><b>56</b><span>已完成任务</span></div>
-            <div><b>85%</b><span>完成率</span></div>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <section class="page" id="words">
-      <div class="page-head">
-        <div><p class="eyebrow">VOCABULARY</p><h1>单词</h1><p>记录、复习并标记你的掌握状态。</p></div>
-        <button class="primary" id="addWordBtn">+ 添加单词</button>
-      </div>
-      <div class="toolbar"><input id="wordSearch" placeholder="搜索单词或中文..." /></div>
-      <div class="list" id="wordList"></div>
-    </section>
-
-    <section class="page" id="phrases">
-      <div class="page-head"><div><p class="eyebrow">PHRASES</p><h1>短语</h1><p>集中整理固定搭配和常用表达。</p></div></div>
-      <div class="list">
-        <div class="list-item"><div><h3>focus on</h3><p>集中注意力于……</p></div><span>短语</span></div>
-        <div class="list-item"><div><h3>build confidence</h3><p>建立自信</p></div><span>短语</span></div>
-        <div class="list-item"><div><h3>solve problems</h3><p>解决问题</p></div><span>短语</span></div>
-      </div>
-    </section>
-
-    <section class="page" id="grammar">
-      <div class="page-head"><div><p class="eyebrow">GRAMMAR</p><h1>语法</h1><p>按知识点学习，再通过小练习巩固。</p></div></div>
-      <div class="lesson-grid">
-        <article class="lesson"><span>01</span><h3>句子成分</h3><p>主语、谓语、宾语、定语、状语。</p><button class="ghost">开始学习</button></article>
-        <article class="lesson"><span>02</span><h3>时态</h3><p>一般时、进行时、完成时的核心用法。</p><button class="ghost">开始学习</button></article>
-        <article class="lesson"><span>03</span><h3>非谓语动词</h3><p>to do、doing、done 的基本区别。</p><button class="ghost">开始学习</button></article>
-      </div>
-    </section>
-
-    <section class="page" id="reading">
-      <div class="page-head"><div><p class="eyebrow">READING</p><h1>阅读</h1><p>短篇阅读、四级题目与长难句分析。</p></div></div>
-      <div class="list">
-        <div class="list-item clickable"><div><h3>Why Good Study Habits Matter</h3><p>难度：基础 · 约 180 词</p></div><span>开始 →</span></div>
-        <div class="list-item clickable"><div><h3>Learning Outside the Classroom</h3><p>难度：基础+ · 约 220 词</p></div><span>开始 →</span></div>
-      </div>
-    </section>
-
-    <section class="page" id="listening">
-      <div class="page-head"><div><p class="eyebrow">LISTENING</p><h1>听力</h1><p>选择题、复述与四级风格听力训练。</p></div></div>
-      <div class="lesson-grid">
-        <article class="lesson"><span>01</span><h3>Study Habits</h3><p>短文听力 + 选择题</p><button class="ghost">开始听力</button></article>
-        <article class="lesson"><span>02</span><h3>Campus Life</h3><p>短文听力 + 英语复述</p><button class="ghost">开始听力</button></article>
-      </div>
-    </section>
-
-    <section class="page" id="mistakes">
-      <div class="page-head"><div><p class="eyebrow">MISTAKES</p><h1>错题本</h1><p>把需要再次复习的内容集中到这里。</p></div></div>
-      <div class="empty" id="mistakeEmpty">暂时还没有错题。继续保持。</div>
-    </section>
-  </main>
-
-  <div class="modal" id="wordModal">
-    <div class="modal-card">
-      <button class="close" id="closeModal">×</button>
-      <h2>添加单词</h2>
-      <input id="newWord" placeholder="英文单词，例如 improve" />
-      <input id="newMeaning" placeholder="中文意思，例如 提高；改善" />
-      <input id="newPos" placeholder="词性，例如 v." />
-      <input id="newExample" placeholder="例句（可选）" />
-      <button class="primary wide" id="saveWord">保存</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes"><title>Lingo.</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f7f8fa;color:#111827;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif}header{position:sticky;top:0;z-index:5;background:#fffffff2;backdrop-filter:blur(16px);border-bottom:1px solid #e8ecf1}.top,nav,main{max-width:1080px;margin:auto}.top{padding:14px 16px 8px;display:flex;justify-content:space-between;align-items:center}.brand{font-size:25px;font-weight:800}nav{display:flex;gap:6px;overflow:auto;padding:0 16px 10px}nav button,.filter{border:0;border-radius:999px;padding:9px 12px;background:transparent;color:#667085;white-space:nowrap}nav button.active,.filter.active{background:#111827;color:#fff}main{padding:24px 16px 60px}.page{display:none}.page.active{display:block}h1{font-size:40px;letter-spacing:-1.5px;margin:8px 0}.muted{color:#667085}.k{font-size:12px;letter-spacing:1.3px;color:#98a2b3;font-weight:700}.hero{padding:10px 0 20px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card,.item,.gcard{background:#fff;border:1px solid #e9edf2;border-radius:18px;padding:18px;box-shadow:0 7px 22px #10182808}.big{font-size:29px;font-weight:800;display:block;margin-top:7px}.search{width:100%;padding:13px 14px;border-radius:13px;border:1px solid #e2e7ec;background:#fff;font-size:15px;margin-bottom:12px}.filters{display:flex;gap:7px;overflow:auto;margin-bottom:14px}.filter{background:#fff;border:1px solid #e4e7ec}.list{display:grid;gap:9px}.item{display:flex;justify-content:space-between;gap:12px}.item h3,.gcard h3{margin:0 0 5px}.item p,.gcard p{margin:0;color:#667085;line-height:1.6}.badge{font-size:12px;background:#f2f4f7;color:#667085;padding:5px 8px;border-radius:999px;height:max-content;white-space:nowrap}.phrasegrid,.grammargrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}details{border-top:1px solid #eef1f4;margin-top:12px;padding-top:10px}summary{font-weight:650}details div{line-height:1.65;color:#475467;margin-top:7px}.tip{background:#111827;color:#fff;border-radius:20px;padding:20px;margin-top:15px}.tip p{color:#d0d5dd;line-height:1.65}@media(max-width:700px){.grid{grid-template-columns:1fr 1fr}.phrasegrid,.grammargrid{grid-template-columns:1fr}h1{font-size:36px}}
+</style></head><body>
+<header><div class="top"><div class="brand">Lingo.</div><div class="muted">Day 1–10</div></div><nav>
+<button class="active" data-page="home">首页</button><button data-page="words">单词</button><button data-page="phrases">短语</button><button data-page="grammar">语法</button>
+</nav></header><main>
+<section class="page active" id="home"><div class="hero"><div class="k">CET-4 KNOWLEDGE BASE</div><h1>已学知识库</h1><p class="muted">Day 1–10 的单词、固定搭配与语法。</p></div>
+<div class="grid"><div class="card"><span class="muted">已学单词</span><b class="big" id="wc"></b>个</div><div class="card"><span class="muted">固定搭配</span><b class="big" id="pc"></b>个</div><div class="card"><span class="muted">语法/易混点</span><b class="big" id="gc"></b>项</div></div>
+<div class="tip"><b>Day 11 以后</b><p>这里的单词默认视为已学词；固定搭配和已学语法继续复现。重点复习：介词 + doing、时态判断、have/has been + done。</p></div></section>
+<section class="page" id="words"><div class="hero"><div class="k">VOCABULARY</div><h1>单词</h1><p class="muted">支持英文、中文搜索和词性分类。</p></div><input class="search" id="ws" placeholder="搜索单词或中文…"><div class="filters" id="wf"></div><div class="list" id="wl"></div></section>
+<section class="page" id="phrases"><div class="hero"><div class="k">PHRASES</div><h1>固定搭配</h1></div><input class="search" id="ps" placeholder="搜索短语或中文…"><div class="phrasegrid" id="pl"></div></section>
+<section class="page" id="grammar"><div class="hero"><div class="k">GRAMMAR</div><h1>语法</h1><p class="muted">点击“展开详细”查看例句和易错点。</p></div><input class="search" id="gs" placeholder="搜索语法、句型或易混词…"><div class="filters" id="gf"></div><div class="grammargrid" id="gl"></div></section>
+</main><script>
+const words=[{"word": "achieve", "pos": "v.", "meaning": "达到；取得", "group": "动词"}, {"word": "adapt", "pos": "v.", "meaning": "适应", "group": "动词"}, {"word": "affect", "pos": "v.", "meaning": "影响", "group": "动词"}, {"word": "analyze", "pos": "v.", "meaning": "分析", "group": "动词"}, {"word": "attend", "pos": "v.", "meaning": "参加；出席", "group": "动词"}, {"word": "attempt", "pos": "v./n.", "meaning": "尝试；试图", "group": "动词"}, {"word": "avoid", "pos": "v.", "meaning": "避免", "group": "动词"}, {"word": "balance", "pos": "v./n.", "meaning": "平衡", "group": "动词"}, {"word": "communicate", "pos": "v.", "meaning": "沟通；交流", "group": "动词"}, {"word": "concentrate", "pos": "v.", "meaning": "集中注意力", "group": "动词"}, {"word": "consider", "pos": "v.", "meaning": "考虑", "group": "动词"}, {"word": "consume", "pos": "v.", "meaning": "消耗；消费", "group": "动词"}, {"word": "continue", "pos": "v.", "meaning": "继续", "group": "动词"}, {"word": "contribute", "pos": "v.", "meaning": "贡献；促成", "group": "动词"}, {"word": "depend", "pos": "v.", "meaning": "依靠；取决于", "group": "动词"}, {"word": "develop", "pos": "v.", "meaning": "发展；培养", "group": "动词"}, {"word": "determine", "pos": "v.", "meaning": "决定；确定", "group": "动词"}, {"word": "encourage", "pos": "v.", "meaning": "鼓励", "group": "动词"}, {"word": "establish", "pos": "v.", "meaning": "建立；确立", "group": "动词"}, {"word": "evaluate", "pos": "v.", "meaning": "评价；评估", "group": "动词"}, {"word": "focus", "pos": "v./n.", "meaning": "集中；焦点", "group": "动词"}, {"word": "improve", "pos": "v.", "meaning": "提高；改善", "group": "动词"}, {"word": "increase", "pos": "v./n.", "meaning": "增加", "group": "动词"}, {"word": "indicate", "pos": "v.", "meaning": "表明；指出", "group": "动词"}, {"word": "introduce", "pos": "v.", "meaning": "介绍；引入", "group": "动词"}, {"word": "involve", "pos": "v.", "meaning": "包含；涉及", "group": "动词"}, {"word": "limit", "pos": "v./n.", "meaning": "限制", "group": "动词"}, {"word": "maintain", "pos": "v.", "meaning": "保持；维持", "group": "动词"}, {"word": "manage", "pos": "v.", "meaning": "管理；设法做到", "group": "动词"}, {"word": "memorize", "pos": "v.", "meaning": "记忆", "group": "动词"}, {"word": "motivate", "pos": "v.", "meaning": "激励", "group": "动词"}, {"word": "observe", "pos": "v.", "meaning": "观察；注意到", "group": "动词"}, {"word": "organize", "pos": "v.", "meaning": "组织；安排", "group": "动词"}, {"word": "overcome", "pos": "v.", "meaning": "克服", "group": "动词"}, {"word": "participate", "pos": "v.", "meaning": "参加", "group": "动词"}, {"word": "perform", "pos": "v.", "meaning": "表现；执行", "group": "动词"}, {"word": "practice", "pos": "v./n.", "meaning": "练习", "group": "动词"}, {"word": "prefer", "pos": "v.", "meaning": "更喜欢", "group": "动词"}, {"word": "prepare", "pos": "v.", "meaning": "准备", "group": "动词"}, {"word": "promote", "pos": "v.", "meaning": "促进；推广", "group": "动词"}, {"word": "provide", "pos": "v.", "meaning": "提供", "group": "动词"}, {"word": "recognize", "pos": "v.", "meaning": "认识到；辨认", "group": "动词"}, {"word": "recommend", "pos": "v.", "meaning": "推荐；建议", "group": "动词"}, {"word": "reduce", "pos": "v.", "meaning": "减少", "group": "动词"}, {"word": "remind", "pos": "v.", "meaning": "提醒", "group": "动词"}, {"word": "replace", "pos": "v.", "meaning": "代替", "group": "动词"}, {"word": "require", "pos": "v.", "meaning": "要求；需要", "group": "动词"}, {"word": "respond", "pos": "v.", "meaning": "回应", "group": "动词"}, {"word": "solve", "pos": "v.", "meaning": "解决", "group": "动词"}, {"word": "support", "pos": "v./n.", "meaning": "支持", "group": "动词"}, {"word": "tend", "pos": "v.", "meaning": "往往；倾向于", "group": "动词"}, {"word": "want", "pos": "v.", "meaning": "想要", "group": "动词"}, {"word": "ability", "pos": "n.", "meaning": "能力", "group": "名词"}, {"word": "advantage", "pos": "n.", "meaning": "优点；优势", "group": "名词"}, {"word": "approach", "pos": "n.", "meaning": "方法；途径", "group": "名词"}, {"word": "assumption", "pos": "n.", "meaning": "假设", "group": "名词"}, {"word": "attitude", "pos": "n.", "meaning": "态度", "group": "名词"}, {"word": "behavior", "pos": "n.", "meaning": "行为", "group": "名词"}, {"word": "benefit", "pos": "n.", "meaning": "好处；益处", "group": "名词"}, {"word": "career", "pos": "n.", "meaning": "职业", "group": "名词"}, {"word": "challenge", "pos": "n.", "meaning": "挑战", "group": "名词"}, {"word": "concentration", "pos": "n.", "meaning": "注意力；专注", "group": "名词"}, {"word": "confidence", "pos": "n.", "meaning": "自信", "group": "名词"}, {"word": "cooperation", "pos": "n.", "meaning": "合作", "group": "名词"}, {"word": "decision", "pos": "n.", "meaning": "决定", "group": "名词"}, {"word": "demand", "pos": "n.", "meaning": "需求", "group": "名词"}, {"word": "disadvantage", "pos": "n.", "meaning": "缺点；劣势", "group": "名词"}, {"word": "education", "pos": "n.", "meaning": "教育", "group": "名词"}, {"word": "effect", "pos": "n.", "meaning": "效果；影响", "group": "名词"}, {"word": "environment", "pos": "n.", "meaning": "环境", "group": "名词"}, {"word": "experience", "pos": "n.", "meaning": "经历；经验", "group": "名词"}, {"word": "factor", "pos": "n.", "meaning": "因素", "group": "名词"}, {"word": "future", "pos": "n.", "meaning": "未来", "group": "名词"}, {"word": "goal", "pos": "n.", "meaning": "目标", "group": "名词"}, {"word": "habit", "pos": "n.", "meaning": "习惯", "group": "名词"}, {"word": "impact", "pos": "n.", "meaning": "影响", "group": "名词"}, {"word": "influence", "pos": "n.", "meaning": "影响", "group": "名词"}, {"word": "internship", "pos": "n.", "meaning": "实习", "group": "名词"}, {"word": "issue", "pos": "n.", "meaning": "问题", "group": "名词"}, {"word": "knowledge", "pos": "n.", "meaning": "知识", "group": "名词"}, {"word": "method", "pos": "n.", "meaning": "方法", "group": "名词"}, {"word": "motivation", "pos": "n.", "meaning": "动力", "group": "名词"}, {"word": "opinion", "pos": "n.", "meaning": "观点", "group": "名词"}, {"word": "opportunity", "pos": "n.", "meaning": "机会", "group": "名词"}, {"word": "period", "pos": "n.", "meaning": "时期；一段时间", "group": "名词"}, {"word": "potential", "pos": "n.", "meaning": "潜力", "group": "名词"}, {"word": "pressure", "pos": "n.", "meaning": "压力", "group": "名词"}, {"word": "priority", "pos": "n.", "meaning": "优先事项", "group": "名词"}, {"word": "progress", "pos": "n.", "meaning": "进步", "group": "名词"}, {"word": "purpose", "pos": "n.", "meaning": "目的", "group": "名词"}, {"word": "quality", "pos": "n.", "meaning": "质量", "group": "名词"}, {"word": "relationship", "pos": "n.", "meaning": "关系；联系", "group": "名词"}, {"word": "requirement", "pos": "n.", "meaning": "要求", "group": "名词"}, {"word": "resource", "pos": "n.", "meaning": "资源", "group": "名词"}, {"word": "responsibility", "pos": "n.", "meaning": "责任", "group": "名词"}, {"word": "result", "pos": "n.", "meaning": "结果", "group": "名词"}, {"word": "schedule", "pos": "n.", "meaning": "日程；计划表", "group": "名词"}, {"word": "society", "pos": "n.", "meaning": "社会", "group": "名词"}, {"word": "solution", "pos": "n.", "meaning": "解决办法", "group": "名词"}, {"word": "strategy", "pos": "n.", "meaning": "策略", "group": "名词"}, {"word": "university", "pos": "n.", "meaning": "大学", "group": "名词"}, {"word": "academic", "pos": "adj.", "meaning": "学术的；学业的", "group": "形容词"}, {"word": "appropriate", "pos": "adj.", "meaning": "合适的；恰当的", "group": "形容词"}, {"word": "available", "pos": "adj.", "meaning": "可获得的；有空的", "group": "形容词"}, {"word": "aware", "pos": "adj.", "meaning": "意识到的", "group": "形容词"}, {"word": "beneficial", "pos": "adj.", "meaning": "有益的", "group": "形容词"}, {"word": "convenient", "pos": "adj.", "meaning": "方便的", "group": "形容词"}, {"word": "creative", "pos": "adj.", "meaning": "有创造力的", "group": "形容词"}, {"word": "critical", "pos": "adj.", "meaning": "关键的；批判性的", "group": "形容词"}, {"word": "digital", "pos": "adj.", "meaning": "数字化的", "group": "形容词"}, {"word": "distracted", "pos": "adj.", "meaning": "分心的", "group": "形容词"}, {"word": "effective", "pos": "adj.", "meaning": "有效的", "group": "形容词"}, {"word": "efficient", "pos": "adj.", "meaning": "高效的", "group": "形容词"}, {"word": "essential", "pos": "adj.", "meaning": "必要的；极其重要的", "group": "形容词"}, {"word": "familiar", "pos": "adj.", "meaning": "熟悉的", "group": "形容词"}, {"word": "flexible", "pos": "adj.", "meaning": "灵活的", "group": "形容词"}, {"word": "frustrated", "pos": "adj.", "meaning": "沮丧的", "group": "形容词"}, {"word": "helpful", "pos": "adj.", "meaning": "有帮助的", "group": "形容词"}, {"word": "immediate", "pos": "adj.", "meaning": "立即的", "group": "形容词"}, {"word": "important", "pos": "adj.", "meaning": "重要的", "group": "形容词"}, {"word": "independent", "pos": "adj.", "meaning": "独立的", "group": "形容词"}, {"word": "individual", "pos": "adj.", "meaning": "个人的；个体的", "group": "形容词"}, {"word": "likely", "pos": "adj.", "meaning": "可能的", "group": "形容词"}, {"word": "local", "pos": "adj.", "meaning": "当地的", "group": "形容词"}, {"word": "necessary", "pos": "adj.", "meaning": "必要的", "group": "形容词"}, {"word": "negative", "pos": "adj.", "meaning": "消极的；负面的", "group": "形容词"}, {"word": "positive", "pos": "adj.", "meaning": "积极的；正面的", "group": "形容词"}, {"word": "potential", "pos": "adj.", "meaning": "潜在的", "group": "形容词"}, {"word": "practical", "pos": "adj.", "meaning": "实际的；实用的", "group": "形容词"}, {"word": "regular", "pos": "adj.", "meaning": "有规律的", "group": "形容词"}, {"word": "responsible", "pos": "adj.", "meaning": "负责任的", "group": "形容词"}, {"word": "specific", "pos": "adj.", "meaning": "具体的", "group": "形容词"}, {"word": "successful", "pos": "adj.", "meaning": "成功的", "group": "形容词"}, {"word": "suitable", "pos": "adj.", "meaning": "合适的", "group": "形容词"}, {"word": "traditional", "pos": "adj.", "meaning": "传统的", "group": "形容词"}, {"word": "valuable", "pos": "adj.", "meaning": "有价值的", "group": "形容词"}, {"word": "various", "pos": "adj.", "meaning": "各种各样的", "group": "形容词"}, {"word": "effectively", "pos": "adv.", "meaning": "有效地", "group": "副词及其他"}, {"word": "efficiently", "pos": "adv.", "meaning": "高效地", "group": "副词及其他"}, {"word": "increasingly", "pos": "adv.", "meaning": "越来越多地", "group": "副词及其他"}, {"word": "instead", "pos": "adv.", "meaning": "反而；代替", "group": "副词及其他"}, {"word": "properly", "pos": "adv.", "meaning": "正确地；适当地", "group": "副词及其他"}, {"word": "therefore", "pos": "adv.", "meaning": "因此", "group": "副词及其他"}],phrases=[{"phrase": "focus on", "meaning": "专注于"}, {"phrase": "concentrate on", "meaning": "专注于"}, {"phrase": "participate in", "meaning": "参加"}, {"phrase": "adapt to", "meaning": "适应"}, {"phrase": "contribute to", "meaning": "有助于；促成"}, {"phrase": "benefit from", "meaning": "从……中受益"}, {"phrase": "communicate with", "meaning": "与……交流"}, {"phrase": "prepare for", "meaning": "为……做准备"}, {"phrase": "solve a problem", "meaning": "解决问题"}, {"phrase": "develop a habit", "meaning": "培养习惯"}, {"phrase": "establish a habit", "meaning": "建立习惯"}, {"phrase": "maintain concentration", "meaning": "保持注意力"}, {"phrase": "gain confidence", "meaning": "获得自信"}, {"phrase": "replace A with B", "meaning": "用B代替A"}, {"phrase": "manage time", "meaning": "管理时间"}, {"phrase": "organize activities", "meaning": "组织活动"}, {"phrase": "balance A and B", "meaning": "平衡A和B"}, {"phrase": "perform well", "meaning": "表现良好"}, {"phrase": "make progress", "meaning": "取得进步"}, {"phrase": "take short breaks", "meaning": "短暂休息"}, {"phrase": "evaluate progress", "meaning": "评估进度"}, {"phrase": "evaluate performance", "meaning": "评估表现"}, {"phrase": "observe changes", "meaning": "观察变化"}, {"phrase": "be responsible for", "meaning": "对……负责"}, {"phrase": "be aware of", "meaning": "意识到……"}, {"phrase": "be familiar with", "meaning": "熟悉……"}, {"phrase": "be suitable for", "meaning": "适合……"}, {"phrase": "be appropriate for", "meaning": "适合；适用于……"}, {"phrase": "be likely to do", "meaning": "很可能做……"}, {"phrase": "be beneficial to", "meaning": "对……有益"}, {"phrase": "depend on", "meaning": "取决于；依赖"}, {"phrase": "respond to", "meaning": "回应……"}, {"phrase": "have difficulty doing", "meaning": "做……有困难"}, {"phrase": "have an effect on", "meaning": "对……产生影响"}, {"phrase": "have an impact on", "meaning": "对……产生影响"}, {"phrase": "positive effect", "meaning": "积极影响"}, {"phrase": "negative effect", "meaning": "消极影响"}, {"phrase": "give priority to", "meaning": "优先考虑"}, {"phrase": "take responsibility for", "meaning": "对……承担责任"}, {"phrase": "deal with pressure", "meaning": "应对压力"}, {"phrase": "academic performance", "meaning": "学业表现"}, {"phrase": "learning strategy", "meaning": "学习策略"}, {"phrase": "positive attitude", "meaning": "积极态度"}, {"phrase": "valuable experience", "meaning": "宝贵经历"}, {"phrase": "flexible schedule", "meaning": "灵活的时间安排"}, {"phrase": "solution to", "meaning": "……的解决办法"}, {"phrase": "individual needs", "meaning": "个人需求"}, {"phrase": "individual differences", "meaning": "个体差异"}, {"phrase": "relationship between A and B", "meaning": "A与B之间的关系"}, {"phrase": "the purpose of", "meaning": "……的目的"}, {"phrase": "provide sb. with sth.", "meaning": "给某人提供某物"}, {"phrase": "according to", "meaning": "根据"}, {"phrase": "instead of", "meaning": "而不是"}, {"phrase": "rather than", "meaning": "而不是"}, {"phrase": "at the same time", "meaning": "同时"}, {"phrase": "step by step", "meaning": "一步一步地"}],grammar=[{"title": "动词 + to do / sb. + to do", "tag": "非谓语", "summary": "want/need/manage/attempt + to do；require/encourage/motivate/remind + sb. + to do。", "details": ["She managed to complete the task.", "The teacher encouraged students to practice English."]}, {"title": "必须接 doing 的结构", "tag": "非谓语", "summary": "avoid/recommend/consider + doing；spend time/have difficulty/end up + doing。", "details": ["Students should avoid spending too much time on their phones.", "I have difficulty understanding this sentence."]}, {"title": "介词 + doing", "tag": "重点", "summary": "focus on doing、concentrate on doing、participate in doing、contribute to doing、be aware of doing、solution to doing。", "details": ["want to learn ✅", "contribute to improving ✅", "不能看见 to 就无脑接动词原形。"]}, {"title": "一般现在时", "tag": "时态", "summary": "表示习惯、经常发生的事情、客观事实。", "details": ["I study English every day.", "信号：every day / usually / often / always"]}, {"title": "现在进行时", "tag": "时态", "summary": "am/is/are + doing，表示现在正在发生。", "details": ["The students are preparing for the test now.", "信号：now / Look! / Listen!"]}, {"title": "一般过去时", "tag": "时态", "summary": "表示过去发生并结束的事情。", "details": ["She finished her homework yesterday.", "信号：yesterday / last week / last year / … ago"]}, {"title": "现在完成时", "tag": "时态", "summary": "have/has + done；for + 一段时间；since + 时间点。", "details": ["I have studied English for three years.", "since 2024 / since last year / already"]}, {"title": "被动语态", "tag": "重点", "summary": "核心：be + done；重点继续练现在完成时被动。", "details": ["一般现在时：am/is/are + done", "一般过去时：was/were + done", "现在完成时：have/has + been + done", "This learning method has been used since last year."]}, {"title": "比较级", "tag": "比较级", "summary": "A + be + 比较级 + than + B；长词通常用 more。", "details": ["fast → faster", "easy → easier", "effective → more effective", "This method is more effective than the old one."]}, {"title": "特殊比较级", "tag": "比较级", "summary": "不规则变化。", "details": ["good → better → best", "bad → worse → worst", "many/much → more → most", "little → less → least"]}, {"title": "比较级加强", "tag": "比较级", "summary": "much / far / a little / a lot + 比较级。", "details": ["much better / far better / a little better / a lot better", "very better ❌ / more better ❌"]}, {"title": "最高级", "tag": "比较级", "summary": "the + 最高级；one of the + 最高级 + 名词复数。", "details": ["the most effective method", "one of the most important skills"]}, {"title": "越来越……", "tag": "比较级", "summary": "比较级 + and + 比较级。", "details": ["better and better", "faster and faster", "more and more important"]}, {"title": "The more..., the more...", "tag": "句型", "summary": "The + 比较级…, the + 比较级… 表示“越……越……”。", "details": ["The more you practice, the better you perform.", "The more you practice, the more confident you become."]}, {"title": "instead of + doing", "tag": "句型", "summary": "instead of 后接名词或 doing。", "details": ["Instead of playing on the phone, students should study."]}, {"title": "prefer A to B", "tag": "句型", "summary": "prefer A to B；如果两边是动作，通常都用 doing。", "details": ["I prefer reading to listening.", "这里的 to 是介词。"]}, {"title": "involve + doing", "tag": "句型", "summary": "involve 后接 doing，不接 to do。", "details": ["Learning English involves practicing regularly.", "involves to practice ❌"]}, {"title": "provide sb. with sth.", "tag": "句型", "summary": "给某人提供某物。", "details": ["Universities provide students with learning resources."]}, {"title": "be likely to do", "tag": "句型", "summary": "很可能做……", "details": ["Students with clear goals are more likely to succeed."]}, {"title": "one of the + 最高级 + 名词复数", "tag": "句型", "summary": "四级高频结构。", "details": ["English is one of the most important subjects."]}, {"title": "affect / effect", "tag": "易混词", "summary": "affect 常作动词；effect 常作名词。", "details": ["Stress can affect learning.", "Stress has an effect on learning."]}, {"title": "effective / efficient", "tag": "易混词", "summary": "effective 强调有效果；efficient 强调高效率。", "details": ["an effective learning method", "an efficient learner", "effectively / efficiently"]}, {"title": "suitable / familiar / appropriate", "tag": "易混词", "summary": "suitable 适合；familiar 熟悉；appropriate 恰当。", "details": ["be suitable for", "be familiar with", "be appropriate for"]}, {"title": "likely / appropriate", "tag": "易混词", "summary": "likely 强调可能；appropriate 强调合适。", "details": ["Students are likely to make progress.", "an appropriate learning method"]}, {"title": "concentrate / concentration", "tag": "易混词", "summary": "concentrate 是动词；concentration 是名词。", "details": ["concentrate on studying", "maintain concentration"]}];
+wc.textContent=words.length;pc.textContent=phrases.length;gc.textContent=grammar.length;
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.page).classList.add('active');scrollTo(0,0)});
+let wg='全部';const wgs=['全部','动词','名词','形容词','副词及其他'];wf.innerHTML=wgs.map(x=>`<button class="filter ${x==='全部'?'active':''}" data-x="${x}">${x}</button>`).join('');
+wf.onclick=e=>{if(!e.target.dataset.x)return;wg=e.target.dataset.x;wf.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x.dataset.x===wg));rw()};ws.oninput=rw;
+function rw(){let q=ws.value.toLowerCase();let a=words.filter(w=>(wg==='全部'||w.group===wg)&&(`${w.word} ${w.meaning} ${w.pos}`).toLowerCase().includes(q));wl.innerHTML=a.map(w=>`<div class="item"><div><h3>${w.word}</h3><p>${w.pos} · ${w.meaning}</p></div><span class="badge">${w.group}</span></div>`).join('')}rw();
+ps.oninput=rp;function rp(){let q=ps.value.toLowerCase();let a=phrases.filter(p=>(p.phrase+' '+p.meaning).toLowerCase().includes(q));pl.innerHTML=a.map(p=>`<div class="item"><div><h3>${p.phrase}</h3><p>${p.meaning}</p></div></div>`).join('')}rp();
+let gt='全部';const gts=['全部',...new Set(grammar.map(g=>g.tag))];gf.innerHTML=gts.map(x=>`<button class="filter ${x==='全部'?'active':''}" data-x="${x}">${x}</button>`).join('');
+gf.onclick=e=>{if(!e.target.dataset.x)return;gt=e.target.dataset.x;gf.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x.dataset.x===gt));rg()};gs.oninput=rg;
+function rg(){let q=gs.value.toLowerCase();let a=grammar.filter(g=>(gt==='全部'||g.tag===gt)&&(`${g.title} ${g.summary} ${g.details.join(' ')}`).toLowerCase().includes(q));gl.innerHTML=a.map(g=>`<article class="gcard"><div style="display:flex;justify-content:space-between;gap:10px"><div><h3>${g.title}</h3><p>${g.summary}</p></div><span class="badge">${g.tag}</span></div><details><summary>展开详细</summary>${g.details.map(d=>`<div>• ${d}</div>`).join('')}</details></article>`).join('')}rg();
+</script></body></html>
