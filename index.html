@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lingo. 英语学习</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Lingo.</div>
+    <nav id="nav">
+      <button class="nav-btn active" data-page="home">首页</button>
+      <button class="nav-btn" data-page="words">单词</button>
+      <button class="nav-btn" data-page="phrases">短语</button>
+      <button class="nav-btn" data-page="grammar">语法</button>
+      <button class="nav-btn" data-page="reading">阅读</button>
+      <button class="nav-btn" data-page="listening">听力</button>
+      <button class="nav-btn" data-page="mistakes">错题本</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page active" id="home">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">ENGLISH STUDY DASHBOARD</p>
+          <h1>Good morning.</h1>
+          <p class="subtitle">今天想学点什么？</p>
+        </div>
+        <div class="quote-card">
+          <span>今日一句</span>
+          <strong>The best time to start is now.</strong>
+          <small>最好的开始就是现在。</small>
+        </div>
+      </div>
+
+      <div class="cards">
+        <article class="study-card"><span class="icon">Aa</span><h3>单词</h3><p><b id="wordCount">3</b> 个</p><div class="bar"><i style="width:35%"></i></div></article>
+        <article class="study-card"><span class="icon">“ ”</span><h3>短语</h3><p><b>3</b> 个</p><div class="bar"><i style="width:28%"></i></div></article>
+        <article class="study-card"><span class="icon">文</span><h3>语法</h3><p><b>3</b> 节</p><div class="bar"><i style="width:40%"></i></div></article>
+        <article class="study-card"><span class="icon">≡</span><h3>阅读</h3><p><b>2</b> 篇</p><div class="bar"><i style="width:25%"></i></div></article>
+        <article class="study-card"><span class="icon">▶</span><h3>听力</h3><p><b>2</b> 篇</p><div class="bar"><i style="width:22%"></i></div></article>
+        <article class="study-card"><span class="icon">✓</span><h3>错题本</h3><p><b id="mistakeCount">0</b> 题</p><div class="bar"><i style="width:8%"></i></div></article>
+      </div>
+
+      <div class="lower-grid">
+        <section class="panel">
+          <div class="panel-title"><h2>今日学习</h2><span id="taskProgress">0 / 5</span></div>
+          <label><input type="checkbox" class="task"> 复习 15 个单词</label>
+          <label><input type="checkbox" class="task"> 学习 5 个常用短语</label>
+          <label><input type="checkbox" class="task"> 完成 1 个语法知识点</label>
+          <label><input type="checkbox" class="task"> 完成 1 篇阅读</label>
+          <label><input type="checkbox" class="task"> 完成 1 篇听力</label>
+        </section>
+        <section class="panel">
+          <div class="panel-title"><h2>学习数据</h2><span>本周</span></div>
+          <div class="stats">
+            <div><b>7</b><span>连续天数</span></div>
+            <div><b>12h</b><span>累计时长</span></div>
+            <div><b>56</b><span>已完成任务</span></div>
+            <div><b>85%</b><span>完成率</span></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="page" id="words">
+      <div class="page-head">
+        <div><p class="eyebrow">VOCABULARY</p><h1>单词</h1><p>记录、复习并标记你的掌握状态。</p></div>
+        <button class="primary" id="addWordBtn">+ 添加单词</button>
+      </div>
+      <div class="toolbar"><input id="wordSearch" placeholder="搜索单词或中文..." /></div>
+      <div class="list" id="wordList"></div>
+    </section>
+
+    <section class="page" id="phrases">
+      <div class="page-head"><div><p class="eyebrow">PHRASES</p><h1>短语</h1><p>集中整理固定搭配和常用表达。</p></div></div>
+      <div class="list">
+        <div class="list-item"><div><h3>focus on</h3><p>集中注意力于……</p></div><span>短语</span></div>
+        <div class="list-item"><div><h3>build confidence</h3><p>建立自信</p></div><span>短语</span></div>
+        <div class="list-item"><div><h3>solve problems</h3><p>解决问题</p></div><span>短语</span></div>
+      </div>
+    </section>
+
+    <section class="page" id="grammar">
+      <div class="page-head"><div><p class="eyebrow">GRAMMAR</p><h1>语法</h1><p>按知识点学习，再通过小练习巩固。</p></div></div>
+      <div class="lesson-grid">
+        <article class="lesson"><span>01</span><h3>句子成分</h3><p>主语、谓语、宾语、定语、状语。</p><button class="ghost">开始学习</button></article>
+        <article class="lesson"><span>02</span><h3>时态</h3><p>一般时、进行时、完成时的核心用法。</p><button class="ghost">开始学习</button></article>
+        <article class="lesson"><span>03</span><h3>非谓语动词</h3><p>to do、doing、done 的基本区别。</p><button class="ghost">开始学习</button></article>
+      </div>
+    </section>
+
+    <section class="page" id="reading">
+      <div class="page-head"><div><p class="eyebrow">READING</p><h1>阅读</h1><p>短篇阅读、四级题目与长难句分析。</p></div></div>
+      <div class="list">
+        <div class="list-item clickable"><div><h3>Why Good Study Habits Matter</h3><p>难度：基础 · 约 180 词</p></div><span>开始 →</span></div>
+        <div class="list-item clickable"><div><h3>Learning Outside the Classroom</h3><p>难度：基础+ · 约 220 词</p></div><span>开始 →</span></div>
+      </div>
+    </section>
+
+    <section class="page" id="listening">
+      <div class="page-head"><div><p class="eyebrow">LISTENING</p><h1>听力</h1><p>选择题、复述与四级风格听力训练。</p></div></div>
+      <div class="lesson-grid">
+        <article class="lesson"><span>01</span><h3>Study Habits</h3><p>短文听力 + 选择题</p><button class="ghost">开始听力</button></article>
+        <article class="lesson"><span>02</span><h3>Campus Life</h3><p>短文听力 + 英语复述</p><button class="ghost">开始听力</button></article>
+      </div>
+    </section>
+
+    <section class="page" id="mistakes">
+      <div class="page-head"><div><p class="eyebrow">MISTAKES</p><h1>错题本</h1><p>把需要再次复习的内容集中到这里。</p></div></div>
+      <div class="empty" id="mistakeEmpty">暂时还没有错题。继续保持。</div>
+    </section>
+  </main>
+
+  <div class="modal" id="wordModal">
+    <div class="modal-card">
+      <button class="close" id="closeModal">×</button>
+      <h2>添加单词</h2>
+      <input id="newWord" placeholder="英文单词，例如 improve" />
+      <input id="newMeaning" placeholder="中文意思，例如 提高；改善" />
+      <input id="newPos" placeholder="词性，例如 v." />
+      <input id="newExample" placeholder="例句（可选）" />
+      <button class="primary wide" id="saveWord">保存</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
