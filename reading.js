@@ -1,0 +1,65 @@
+(() => {
+  'use strict';
+  const stories = [
+    {id:'blue-notebook', level:'A2', title:'The Blue Notebook', cn:'蓝色笔记本', kind:'校园小故事', paragraphs:[
+      'Lily finds a blue notebook on a chair in the library. There is no name on the front. She opens the first page and sees a drawing of a small house. Under the drawing, someone has written, “My dream home.” Lily smiles. She also likes drawing, but she is not very good at it yet.',
+      'She takes the notebook to the library desk. “Has anyone asked about this?” she asks. The woman at the desk shakes her head. Lily leaves the notebook with her and goes back to her books. Ten minutes later, a young man comes in. He looks under the chairs and walks around the room twice.',
+      '“Are you looking for a blue notebook?” Lily asks. His face changes at once. “Yes! It has all my drawings in it.” Lily points to the desk. Before he leaves, he thanks her and shows her a picture of the library. “You can join our drawing club,” he says. Lily writes down the meeting time. Perhaps this is a good way to start.'
+    ], translation:[
+      '莉莉在图书馆的一把椅子上发现了一本蓝色笔记本。封面上没有名字。她翻开第一页，看见一幅小房子的画。画下面有人写着：“我梦想中的家。”莉莉笑了。她也喜欢画画，不过还不太擅长。',
+      '她把笔记本拿到图书馆服务台，问：“有人来问过这个吗？”服务台的女士摇了摇头。莉莉把笔记本交给她，回去继续看书。十分钟后，一个年轻男子走了进来。他往椅子下面看，还绕着房间走了两圈。',
+      '“你在找一本蓝色笔记本吗？”莉莉问。他的表情立刻变了。“对！里面有我所有的画。”莉莉指向服务台。离开前，他向她道谢，还给她看了一幅图书馆的画。“你可以加入我们的绘画社，”他说。莉莉记下了活动时间。也许这是个不错的开始。'
+    ], words:[['drawing','n.','画；图画'],['shake one’s head','短语','摇头'],['look for','短语','寻找'],['at once','短语','立刻']], focus:'注意 finds、opens、asks：故事可以用一般现在时讲述，让画面像正在眼前发生。', prompt:'莉莉捡到了什么？她怎样帮助失主？用 3 句英语说说这个故事。'},
+    {id:'sunday-breakfast',level:'A2',title:'A Different Sunday',cn:'不一样的星期天',kind:'生活短文',paragraphs:[
+      'On most Sundays, Ben gets up late and buys breakfast at a small shop. This Sunday, the shop is closed. He stands outside for a moment, then decides to make breakfast himself. At home, he finds two eggs, some bread and a tomato. There is also a little milk in the fridge.',
+      'Ben has never cooked eggs before, so he calls his sister. “Start with a small fire, and don’t walk away,” she tells him. He puts his phone on the table and listens carefully. The first egg does not look very nice, but the second one looks better. He cuts the tomato and puts everything on a plate.',
+      'While he is eating, his sister calls again. “How is your breakfast?” she asks. “It isn’t beautiful, but it tastes good,” Ben says. After washing his plate, he writes a short shopping list. Next Sunday, he wants to cook for his sister. He still likes the breakfast shop, but now he has another choice.'
+    ],translation:[
+      '大多数星期天，本都起得很晚，然后去一家小店买早餐。这个星期天，小店关门了。他在门口站了一会儿，随后决定自己做早餐。在家里，他找到了两个鸡蛋、一些面包和一个番茄。冰箱里还有一点牛奶。',
+      '本以前从来没做过鸡蛋，于是给姐姐打电话。“先用小火，而且别走开，”姐姐告诉他。他把手机放在桌上，认真听着。第一个鸡蛋看起来不太好看，第二个却好些了。他切好番茄，把所有东西放在盘子里。',
+      '他正吃着，姐姐又打来了电话。“早餐怎么样？”她问。“不好看，但很好吃，”本说。洗完盘子后，他写了一张简短的购物清单。下个星期天，他想给姐姐做饭。他仍然喜欢那家早餐店，不过现在他多了一个选择。'
+    ],words:[['fridge','n.','冰箱'],['plate','n.','盘子'],['taste','v.','尝起来'],['choice','n.','选择']],focus:'has never cooked：现在完成时，表达截至现在从未有过的经历。While he is eating 表示“当他正在吃饭时”。',prompt:'本为什么自己做早餐？这次尝试给他带来了什么变化？用 First / Then / Finally 复述。'},
+    {id:'ten-minute-start',level:'B1',title:'Just Ten Minutes',cn:'先做十分钟',kind:'成长小故事',paragraphs:[
+      'Mia had a presentation to prepare, but every time she opened her laptop, she found something else to do. She checked messages, cleaned her desk and even organised her music collection. By the end of the afternoon, her room looked wonderful, but her presentation was still empty. The problem was not that she had no ideas. She simply did not know where to begin.',
+      'Her roommate suggested a small experiment. “Don’t try to finish it,” she said. “Work on it for ten minutes. When the time is up, you can stop.” Mia thought this sounded almost too easy. Still, she set a timer and wrote down three questions that her presentation should answer. Then she added one example under each question.',
+      'When the timer rang, Mia had not finished the presentation. However, the empty page no longer seemed frightening. She could see a possible structure and knew what information she needed next. She took a short break, then decided to work for another ten minutes.',
+      'Later, Mia told her roommate that the timer had not made the work easier. It had made starting easier. The following day, she used the same method to practise a difficult piece of music. She worked on just two lines instead of trying to play the whole piece perfectly. Small beginnings did not solve every problem, but they gave her somewhere to start.'
+    ],translation:[
+      '米娅要准备一次展示，可每次打开电脑，她都会找些别的事做。她看消息、清理桌面，甚至整理了自己的音乐收藏。到了下午结束时，房间整洁极了，但展示内容还是空白。问题不是她没有想法，而是她不知道从哪儿开始。',
+      '室友建议她做个小实验。“别想着把它做完，”她说，“先做十分钟。时间到了就可以停下来。”米娅觉得这听起来简直太简单了。不过，她还是设好了计时器，写下展示需要回答的三个问题，然后在每个问题下面添了一个例子。',
+      '计时器响时，米娅并没有完成展示。但那张空白页面已经不那么令人害怕了。她能看出一个大致结构，也知道接下来需要什么信息。她短暂休息后，决定再做十分钟。',
+      '后来，米娅告诉室友，计时器没有让工作本身更容易，却让开始变容易了。第二天，她用同样的方法练一首难曲子。她只练两行，而不是试着把整首曲子完美地弹下来。小小的开始不能解决所有问题，但能让她知道从哪里着手。'
+    ],words:[['presentation','n.','展示；报告'],['experiment','n.','实验；尝试'],['structure','n.','结构'],['frightening','adj.','令人害怕的'],['instead of doing','短语','而不是做……']],focus:'It had made starting easier：make + 宾语 + 形容词；starting 是动名词，表示“开始这件事”。故事主线用一般过去时。',prompt:'为什么十分钟的方法有用？用自己的经历接着说：When a task feels difficult, I can…'},
+    {id:'quiet-concert',level:'B1',title:'The Concert Next Door',cn:'隔壁的音乐会',kind:'音乐小故事',paragraphs:[
+      'Every Thursday evening, Anna heard piano music through the wall of her apartment. The player often stopped in the middle of a piece and repeated the same section. Sometimes Anna wanted complete silence, especially after a long day. One evening, she decided to knock on her neighbour’s door and ask about the practice schedule.',
+      'An older woman opened the door. Before Anna could explain, the woman apologised for the noise. Her name was Mrs Green, and she had recently started learning the piano again after a break of thirty years. She was preparing a short piece for her grandson’s birthday. “I’m afraid he will notice all my mistakes,” she said.',
+      'Anna understood that feeling. She used to sing in a school group, but she had stopped because she worried about performing badly. They agreed on an earlier practice time. As Anna was leaving, Mrs Green asked whether she would like to listen to the piece once. Anna stayed. There were a few wrong notes, but the music felt warm and personal.',
+      'A week later, Mrs Green invited Anna to the small birthday gathering. This time, Anna offered to sing along. Neither performance was perfect, and nobody seemed to mind. On her way home, Anna realised that she had spent years waiting to feel ready to sing again. Perhaps being ready did not mean making no mistakes. Perhaps it meant being willing to share something before it was perfect.'
+    ],translation:[
+      '每周四晚上，安娜都能隔着公寓墙壁听到钢琴声。弹琴的人常常弹到一半就停下来，反复练同一个段落。有时安娜想要绝对安静，尤其是在忙了一整天之后。一天晚上，她决定敲邻居的门，询问练琴时间。',
+      '一位年长的女士开了门。安娜还没解释，她就先为声音道歉了。她叫格林太太，停了三十年后，最近才重新开始学钢琴。她在为孙子的生日准备一首短曲。“我怕他会听出我所有的错误，”她说。',
+      '安娜明白那种感受。她以前在学校的合唱小组唱歌，却因为担心表现不好而停止了。她们商定把练琴时间提前。安娜准备离开时，格林太太问她愿不愿意听一遍曲子。安娜留了下来。虽然有几个错音，音乐却温暖而真挚。',
+      '一周后，格林太太邀请安娜参加小型生日聚会。这一次，安娜主动提出伴着琴声唱歌。两个人的表演都不完美，却似乎没有人在意。回家路上，安娜意识到，自己多年来一直等着“准备好了”再唱。也许准备好不意味着不犯错，而是愿意在尚未完美时就分享。'
+    ],words:[['neighbour','n.','邻居'],['apologise','v.','道歉'],['section','n.','部分；段落'],['gathering','n.','聚会'],['be willing to do','短语','愿意做某事']],focus:'used to sing 表示过去常常唱、现在不一定唱。before it was perfect 中 before 引导时间状语从句。',prompt:'安娜对“准备好了”的理解发生了什么变化？用 3–4 句英语总结，再说说你的看法。'}
+  ];
+  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  let finished=[];try{const saved=JSON.parse(localStorage.getItem('lingo_reading_done_v1')||'[]');if(Array.isArray(saved))finished=saved.filter(id=>stories.some(s=>s.id===id));}catch{}
+  let level='全部',current=null;
+  const tab=document.createElement('button');tab.textContent='英语阅读';tab.dataset.page='reading';document.querySelector('nav').append(tab);
+  const page=document.createElement('section');page.id='reading';page.className='page';page.innerHTML='<div class="hero"><div class="k">A STORY A DAY</div><h1>读一点，走远一点。</h1><p>4 篇原创短文 · A2–B1 参考难度 · 先读英文，遇到困难再看提示</p></div><div class="filters" id="reading-levels"><button class="filter active" data-level="全部">全部</button><button class="filter" data-level="A2">A2 · 轻松读</button><button class="filter" data-level="B1">B1 · 进一阶</button></div><p id="reading-progress"></p><div id="reading-library" class="reading-library"></div><div id="reading-article"></div><p id="reading-message" role="status"></p>';document.querySelector('main').append(page);
+  function navigate(target){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===target));document.querySelectorAll('nav button').forEach(b=>{b.classList.toggle('active',b.dataset.page===target);if(b.dataset.page===target)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});if('speechSynthesis'in window)speechSynthesis.cancel();window.scrollTo(0,0);}
+  tab.onclick=()=>navigate('reading');
+  const $=id=>document.getElementById(id);
+  function count(s){return s.paragraphs.join(' ').split(/\s+/).length;}
+  function catalogue(){current=null;$('reading-article').innerHTML='';$('reading-library').hidden=false;$('reading-levels').hidden=false;$('reading-progress').textContent=`已读 ${finished.length} / ${stories.length} 篇 · 阅读标记保存在当前浏览器`;
+    $('reading-library').innerHTML=stories.filter(s=>level==='全部'||s.level===level).map(s=>`<article class="gcard reading-cover"><span class="badge">${s.level} · ${s.kind}</span><h2>${s.title}</h2><p>${s.cn}</p><p class="reading-meta">${count(s)} 词 · 约 ${Math.ceil(count(s)/45)}–${Math.ceil(count(s)/30)} 分钟${finished.includes(s.id)?' · ✓ 已读':''}</p><button class="action" data-open="${s.id}">${finished.includes(s.id)?'再读一遍':'开始阅读'} →</button></article>`).join('');
+  }
+  function open(id){const s=stories.find(s=>s.id===id);if(!s)return;current=id;$('reading-library').hidden=true;$('reading-levels').hidden=true;
+    $('reading-article').innerHTML=`<button data-back>← 返回文章列表</button><article class="reading-paper"><span class="badge">${s.level} 参考难度 · ${count(s)} 词</span><h2>${s.title}</h2><p class="reading-subtitle">${s.cn}</p><div class="reading-english" lang="en">${s.paragraphs.map(p=>`<p>${p}</p>`).join('')}</div><details><summary>生词与短语提示</summary><p class="reading-meta">这些是阅读辅助词，不会自动加入正式已学词库。</p><dl>${s.words.map(w=>`<dt lang="en">${w[0]} <small>${w[1]}</small></dt><dd>${w[2]}</dd>`).join('')}</dl></details><details><summary>中文翻译 · 读完再看</summary>${s.translation.map(p=>`<p>${p}</p>`).join('')}</details><details><summary>一句语法提示</summary><p>${s.focus}</p></details><div class="reading-output"><h3>读完，说两句</h3><p>${s.prompt}</p><label for="reading-draft">你的复述或读后感（自动保存）</label><textarea id="reading-draft" rows="4" placeholder="先写简单句就很好。"></textarea><p class="reading-meta">用于自己练习，不会自动评分。</p></div><button class="action" data-done>${finished.includes(id)?'✓ 已读 · 取消标记':'标记为已读'}</button></article>`;
+    try{$('reading-draft').value=localStorage.getItem('lingo_reading_draft_'+id)||'';}catch{}
+    $('reading-draft').oninput=e=>{try{localStorage.setItem('lingo_reading_draft_'+id,e.target.value);}catch{$('reading-message').textContent='无法保存草稿，请检查浏览器存储设置。';}};window.scrollTo(0,0);
+  }
+  $('reading-levels').onclick=e=>{const b=e.target.closest('[data-level]');if(!b)return;level=b.dataset.level;document.querySelectorAll('[data-level]').forEach(b=>b.classList.toggle('active',b.dataset.level===level));catalogue();};
+  page.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.open)open(b.dataset.open);if(b.hasAttribute('data-back'))catalogue();if(b.hasAttribute('data-done')&&current){finished=finished.includes(current)?finished.filter(x=>x!==current):[...finished,current];try{localStorage.setItem('lingo_reading_done_v1',JSON.stringify(finished));}catch{$('reading-message').textContent='当前浏览器无法保存已读标记。';}b.textContent=finished.includes(current)?'✓ 已读 · 取消标记':'标记为已读';$('reading-progress').textContent=`已读 ${finished.length} / ${stories.length} 篇 · 阅读标记保存在当前浏览器`;}});
+  catalogue();
+})();
