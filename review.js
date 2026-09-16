@@ -105,5 +105,6 @@
   setInterval(timerTick,1000);
   const footer=document.createElement('p');footer.className='journal-note';footer.textContent='专注时长只统计本页主动开启的计时，切到后台自动暂停。掌握率来自单词自评，不代表语法或考试成绩。';$('home').append(footer);
   if(session?.deck&&[...$('deck').options].some(o=>o.value===session.deck))$('deck').value=session.deck;
+  window.LingoReview={getWord:word=>dictionary.get(word),isKnown:word=>known.includes(word),setKnown(word,value){if(!dictionary.has(word))return;known=value?[...new Set([...known,word])]:known.filter(w=>w!==word);if(value)weak=weak.filter(w=>w!==word);persist();document.dispatchEvent(new Event('lingo-mastery-change'));}};
   render();updateStats();
 })();
